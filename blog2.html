@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>My Blog</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Blog</h1>
+       
+        <button onclick="toggleDayNight()">
+            <i id="toggleIcon" class="fas fa-sun"></i>
+        </button>
+    </header>
+
+    <article>
+        <h2>Paris:The most romantic place in the world</h2>
+        <p>Paris, a city of timeless elegance, where the whispers of history dance with the romance of the present, painting the streets with the hues of love beneath the glow of the Eiffel Tower.</p>
+
+        
+        <button class="like-btn" onclick="likePost()">Like <span id="likeCount">0</span></button>
+
+       
+        <div class="comments">
+            <h3>Comments</h3>
+            <form id="commentForm" onsubmit="submitComment(event)">
+                <label for="comment">Leave a comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit Comment">
+            </form>
+
+            <div id="commentsList"></div>
+        </div>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>

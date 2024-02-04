@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>My Blog</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Blog</h1>
+        <!-- Toggle Day/Night button with moon and sun icons -->
+        <button onclick="toggleDayNight()">
+            <i id="toggleIcon" class="fas fa-sun"></i>
+        </button>
+    </header>
+
+    <article>
+        <h2>Football:-The Game of Joy</h2>
+        <p>Facts can only scratch the surface of the fascinating world of football, a sport that continues to captivate and unite people around the globe.</p>
+
+        <!-- Like button with counter -->
+        <button class="like-btn" onclick="likePost()">Like <span id="likeCount">0</span></button>
+
+        <!-- Comments section -->
+        <div class="comments">
+            <h3>Comments</h3>
+            <form id="commentForm" onsubmit="submitComment(event)">
+                <label for="comment">Leave a comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit Comment">
+            </form>
+
+            <div id="commentsList"></div>
+        </div>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
